@@ -20,7 +20,9 @@ default_necklace_image_path = 'static/Image/Necklace/necklace_1.png'
 
 
 # Create a VideoCapture object to capture video from the webcam (index 0)
-cap = cv2.VideoCapture('/dev/video0')
+cap = cv2.VideoCapture(2)  
+cap.release()   
+cap= cv2.VideoCapture(2) 
 
 def generate_frames(necklace_image_path):
 
